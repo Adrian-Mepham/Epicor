@@ -1,0 +1,11 @@
+Instructions
+DynData Initial Set-up
+Preparation
+Within a customization of an Epicor client screen, in 'Script Editor', there is a 'Script' block.
+Outside the Script code, between the 'using's and the Script, you can paste the entire code from DynData.cs.
+Before saving, ensure there are references to custom assemblies Ice.Contracts.BO.DynamicQuery.dll and Ice.Core.Session.dll. The DynData classes are then usable to create objects within the Script code.
+There will also need to be an EpiUltraGrid in the screen to hold the query. In some cases this grid will be hidden, but it works better if there is one.
+
+Initial Set-up
+The standard implementation pattern has the following common Script-level variables (declared after // Add Custom Module Level Variables Here **):
+    private Dictionary<string,DynData> baqs;
